@@ -7,7 +7,8 @@ class Actor < ActiveRecord::Base
   end
 
   def list_roles
-    self.joins(:characters, :shows)
+    self.characters.all.each do |character|
+      puts "#{name}"
   end
 
 end
