@@ -7,7 +7,7 @@ class Actor < ActiveRecord::Base
   end
 
   def list_roles
-    self.joins(:shows, :characters).pluck(:characters.name, :shows.name)
+    self.pluck(:name)
   end
 
 end
